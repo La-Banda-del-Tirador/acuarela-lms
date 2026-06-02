@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'Outfit', system-ui, sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  
+  /* Transiciones extendidas */
+  --transition-watercolor: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom CSS variables for Watercolor theme */
+:root {
+  --bg-primary: #fbf9f7;
+  --bg-secondary: #ffffff;
+  --text-primary: #1f1b24;
+  --text-secondary: #585062;
+  --border-color: rgba(220, 212, 227, 0.5);
+  
+  /* Colores de acuarela */
+  --watercolor-1: rgba(255, 174, 188, 0.4); /* Rosa suave */
+  --watercolor-2: rgba(186, 215, 233, 0.5); /* Azul agua */
+  --watercolor-3: rgba(246, 244, 210, 0.4); /* Amarillo vainilla */
+  --watercolor-4: rgba(223, 190, 240, 0.45); /* Lavanda */
+  
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(255, 255, 255, 0.6);
+  --sidebar-bg: rgba(255, 255, 255, 0.6);
+  --glass-effect: backdrop-filter: blur(16px) saturate(120%);
+}
+
+.dark {
+  --bg-primary: #0a0813;
+  --bg-secondary: #121020;
+  --text-primary: #f3f0f7;
+  --text-secondary: #b5a9c4;
+  --border-color: rgba(62, 51, 84, 0.5);
+  
+  /* Colores de acuarela en modo oscuro - más vibrantes pero difuminados */
+  --watercolor-1: rgba(244, 63, 94, 0.2);   /* Rosa neón difuso */
+  --watercolor-2: rgba(14, 165, 233, 0.18);  /* Cian difuso */
+  --watercolor-3: rgba(234, 179, 8, 0.12);   /* Oro difuso */
+  --watercolor-4: rgba(168, 85, 247, 0.2);   /* Púrpura neón difuso */
+  
+  --card-bg: rgba(18, 16, 32, 0.65);
+  --card-border: rgba(255, 255, 255, 0.05);
+  --sidebar-bg: rgba(12, 10, 22, 0.7);
+}
+
+* {
+  transition: var(--transition-watercolor);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Clases de utilidad para el diseño Watercolor */
+.glass-panel {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+}
+
+.dark .glass-panel {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-card-hover {
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(168, 85, 247, 0.1);
+}
+
+/* Efecto de acuarela flotante */
+.watercolor-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+  animation: float 25s infinite alternate ease-in-out;
+  mix-blend-mode: multiply;
+}
+
+.dark .watercolor-blob {
+  mix-blend-mode: screen;
+  filter: blur(120px);
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(60px, -80px) scale(1.2) rotate(120deg);
+  }
+  66% {
+    transform: translate(-40px, 50px) scale(0.8) rotate(240deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1) rotate(360deg);
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.4);
+}
+
+/* Gradientes con texto */
+.text-watercolor-gradient {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .text-watercolor-gradient {
+  background: linear-gradient(135deg, #f43f5e 0%, #a855f7 50%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
