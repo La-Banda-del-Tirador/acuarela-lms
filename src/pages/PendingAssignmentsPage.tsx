@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useAcuarelaStore } from '../store/useAcuarelaStore';
 import { SubmitAssignmentModal } from '../components/assignment/SubmitAssignmentModal';
 import { Clock, Calendar, CheckCircle2, ChevronRight } from 'lucide-react';
-import type { Assignment } from '../types';
 
 export const PendingAssignmentsPage: React.FC = () => {
   const { assignments, submissions, enrollments, courses, currentUser, setCurrentView } = useAcuarelaStore();

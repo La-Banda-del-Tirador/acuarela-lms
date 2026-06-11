@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useAcuarelaStore } from '../../store/useAcuarelaStore';
 import { CreateAssignmentModal } from '../assignment/CreateAssignmentModal';
 import { GradeSubmissionModal } from '../assignment/GradeSubmissionModal';
-import { Calendar, FileText, CheckCircle2, AlertCircle, Plus, FileSpreadsheet } from 'lucide-react';
-import type { Assignment, Submission } from '../../types';
+import { Calendar, FileText, AlertCircle, Plus, FileSpreadsheet } from 'lucide-react';
+import type { Submission } from '../../types';
 
 interface TeacherAssignmentsProps {
   courseId: string;

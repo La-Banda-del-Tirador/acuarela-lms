@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAcuarelaStore } from '../../store/useAcuarelaStore';
 import { useToast } from '../../hooks/useToast';
-import { Megaphone, Send, Clock, User } from 'lucide-react';
+import { Megaphone, Send, Clock } from 'lucide-react';
 
 interface AnnouncementsTabProps {
   courseId: string;
