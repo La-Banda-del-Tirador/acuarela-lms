@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Course } from '../../types';
 import { useAcuarelaStore } from '../../store/useAcuarelaStore';
-import { BookOpen, Calendar, ArrowRight, User } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 
 interface CourseCardProps {
   course: Course;

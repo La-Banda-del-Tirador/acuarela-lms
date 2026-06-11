@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useAcuarelaStore } from '../../store/useAcuarelaStore';
 import { useToast } from '../../hooks/useToast';
 import { Modal } from '../ui/Modal';
-import { UploadCloud, File, AlertCircle } from 'lucide-react';
+import { UploadCloud, File } from 'lucide-react';
 
 interface SubmitAssignmentModalProps {
   isOpen: boolean;

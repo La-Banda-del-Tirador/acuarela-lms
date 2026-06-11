@@ -1,4 +1,3 @@
-import React from 'react';
 import { useAcuarelaStore } from './store/useAcuarelaStore';
 import { Navbar } from './components/layout/Navbar';
 import { RoleSwitcher } from './components/layout/RoleSwitcher';

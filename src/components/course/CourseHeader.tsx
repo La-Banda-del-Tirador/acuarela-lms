@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Course } from '../../types';
 import { useAcuarelaStore } from '../../store/useAcuarelaStore';
-import { ArrowLeft, Calendar, ShieldAlert } from 'lucide-react';
+import { ArrowLeft, Calendar } from 'lucide-react';
 
 interface CourseHeaderProps {
   course: Course;

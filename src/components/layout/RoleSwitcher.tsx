@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAcuarelaStore } from '../../store/useAcuarelaStore';
 import { useToast } from '../../hooks/useToast';
-import { UserCheck, Shuffle } from 'lucide-react';
+import { Shuffle } from 'lucide-react';
 
 export const RoleSwitcher: React.FC = () => {
   const { currentUser, switchRoleSimulated } = useAcuarelaStore();
